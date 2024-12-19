@@ -130,7 +130,7 @@ class OzonPAY(CloudScraper):
         self
     ) -> bool:
         """
-        Возвращает успешность запроса.
+        Повторно авторизируется. Используя пин-код
         """
         result = tuple(self("auth_login", {"pincode": self.__pin}).values())
         ok = result[0]
